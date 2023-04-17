@@ -6,7 +6,7 @@
 
 ## Tech stack
 
-Front: Vite, React, Tailwind.
+Front: Vite, React, Tailwind.  
 Back: Webpack, Node, Express.
 
 > Use of ChatEngine.io API for the moment.
