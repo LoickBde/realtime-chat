@@ -1,3 +1,7 @@
 export const App = () => {
-  return <h1 className="text-9xl">Realtime Chat</h1>;
+  return (
+    <body>
+      <h1 className="bg-ctp-base text-ctp-pink">Hello world!</h1>
+    </body>
+  );
 };
