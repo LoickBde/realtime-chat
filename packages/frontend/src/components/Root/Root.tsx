@@ -3,9 +3,9 @@
 // import { useContext } from 'react';
 // import { ThemeContext } from '../../context';
 import { ThemeEnum } from '../../constants';
-import { Chatbar } from '../Chatbar';
+import { Chats } from '../Chats';
 import { Conversation } from '../Conversation';
-import { Sidebar } from '../Sidebar';
+import { Menu } from '../Menu';
 
 export const Root = () => {
   // const { theme } = useContext(ThemeContext);
@@ -17,8 +17,8 @@ export const Root = () => {
       >
         {/* <ThemeSwitcher /> */}
         {/* <Outlet /> */}
-        <Sidebar />
-        <Chatbar />
+        <Menu />
+        <Chats />
         <Conversation />
       </div>
     </main>
