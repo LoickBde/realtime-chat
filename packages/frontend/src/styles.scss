@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .menu__icon {
+    @apply m-auto;
+
+    &-container {
+      @apply flex h-10 w-10 
+      rounded-full cursor-pointer 
+      hover:bg-ctp-surface2/50 
+      transition-all duration-300 ease-linear;
+    }
+  }
+}

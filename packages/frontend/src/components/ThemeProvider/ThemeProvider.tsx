@@ -3,7 +3,7 @@ import { ThemeEnum } from '../../constants';
 import { ThemeContext } from '../../context';
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState(ThemeEnum.LIGHT);
+  const [theme, setTheme] = useState(ThemeEnum.DARK);
 
   const toggleTheme = useCallback(
     () =>
