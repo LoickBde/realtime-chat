@@ -10,7 +10,7 @@ import { MenuIcon } from '../MenuIcon';
 
 export const Menu = () => {
   return (
-    <div className="relative md:w-24 h-full flex flex-col items-center justify-center gap-3">
+    <div className="relative w-24 h-full flex flex-col items-center justify-center gap-3">
       <MenuIcon
         className="relative"
         icon={<BiHome className="menu__icon" size={24} />}
