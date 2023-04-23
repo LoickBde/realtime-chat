@@ -1,21 +1,18 @@
 // import { Outlet } from 'react-router-dom';
-// import { ThemeSwitcher } from '../ThemeSwitcher';
-// import { useContext } from 'react';
-// import { ThemeContext } from '../../context';
-import { ThemeEnum } from '../../constants';
+import { useContext } from 'react';
+import { ThemeContext } from '../../context';
 import { Chats } from '../Chats';
 import { Conversation } from '../Conversation';
 import { Menu } from '../Menu';
 
 export const Root = () => {
-  // const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <main>
       <div
-        className={`${ThemeEnum.DARK} bg-ctp-base w-screen h-screen flex flex-row`}
+        className={`${theme} bg-ctp-base text-ctp-text w-screen h-screen flex`}
       >
-        {/* <ThemeSwitcher /> */}
         {/* <Outlet /> */}
         <Menu />
         <Chats />

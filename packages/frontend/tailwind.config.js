@@ -10,7 +10,24 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        toggleIcon: {
+          '0%': {
+            transform: 'rotate(0deg)',
+          },
+          '90%': {
+            transform: 'rotate(405deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg)',
+          },
+        },
+      },
+      animation: {
+        toggleIcon: 'toggleIcon 0.8s ease-out',
+      },
+    },
   },
   plugins: [
     require('@catppuccin/tailwindcss')({
