@@ -20,7 +20,7 @@
       @apply flex h-10 w-10 
       rounded-full cursor-pointer 
       hover:bg-ctp-surface2/50 
-      transition-all duration-300 ease-linear;
+      transition-all duration-300 ease-out;
     }
   }
 }
