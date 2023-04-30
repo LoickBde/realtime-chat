@@ -7,11 +7,11 @@ export const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [animate, setAnimate] = useState(false);
 
-  const iconClass = `menu__icon${animate ? ' animate-toggleIcon' : ''}`;
+  const iconClass = `btn-icon${animate ? ' animate-toggleIcon' : ''}`;
 
   return (
     <button
-      className="menu__icon-container relative text-ctp-yellow"
+      className="btn-icon-container relative text-ctp-yellow"
       onClick={() => {
         setAnimate(true);
         toggleTheme();

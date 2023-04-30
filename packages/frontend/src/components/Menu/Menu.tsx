@@ -6,31 +6,31 @@ import {
   BiSlider,
 } from 'react-icons/bi';
 import { ThemeSwitcher } from '../ThemeSwitcher';
-import { MenuIcon } from '../MenuIcon';
+import { ButtonIcon } from '../ButtonIcon';
 
 export const Menu = () => {
   return (
     <div className="relative w-24 h-full flex flex-col items-center justify-center gap-3">
-      <MenuIcon
+      <ButtonIcon
         className="relative"
-        icon={<BiHome className="menu__icon" size={24} />}
+        icon={<BiHome className="btn-icon" size={24} />}
       />
-      <MenuIcon
+      <ButtonIcon
         className="relative"
-        icon={<BiChat className="menu__icon" size={24} />}
+        icon={<BiChat className="btn-icon" size={24} />}
       />
-      <MenuIcon
+      <ButtonIcon
         className="relative"
-        icon={<BiSlider className="menu__icon" size={24} />}
+        icon={<BiSlider className="btn-icon" size={24} />}
       />
       <ThemeSwitcher />
-      <MenuIcon
+      <ButtonIcon
         className="absolute bottom-[4.5rem] h-16 w-16"
-        icon={<BiUserCircle className="menu__icon" size={48} />}
+        icon={<BiUserCircle className="btn-icon" size={48} />}
       />
-      <MenuIcon
+      <ButtonIcon
         className="absolute bottom-4"
-        icon={<BiLogOutCircle className="menu__icon text-ctp-red" size={24} />}
+        icon={<BiLogOutCircle className="btn-icon text-ctp-red" size={24} />}
       />
     </div>
   );
