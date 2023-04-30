@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const MenuIcon = ({
+export const ButtonIcon = ({
   className,
   icon,
 }: {
   className?: string;
   icon: React.ReactNode;
 }) => {
-  const classList = `menu__icon-container${className ? ` ${className}` : ''}`;
+  const classList = `btn-icon-container${className?.trim() && ` ${className}`}`;
   return <button className={classList}>{icon}</button>;
 };
