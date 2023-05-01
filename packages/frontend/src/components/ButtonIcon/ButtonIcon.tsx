@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const ButtonIcon = ({
-  className,
+  className = '',
   icon,
 }: {
   className?: string;
