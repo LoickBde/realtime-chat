@@ -11,18 +11,9 @@ import { ButtonIcon } from '../ButtonIcon';
 export const Menu = () => {
   return (
     <div className="relative w-24 h-full flex flex-col items-center justify-center gap-3">
-      <ButtonIcon
-        className="relative"
-        icon={<BiHome className="btn-icon" size={24} />}
-      />
-      <ButtonIcon
-        className="relative"
-        icon={<BiChat className="btn-icon" size={24} />}
-      />
-      <ButtonIcon
-        className="relative"
-        icon={<BiSlider className="btn-icon" size={24} />}
-      />
+      <ButtonIcon icon={<BiHome className="btn-icon" size={24} />} />
+      <ButtonIcon icon={<BiChat className="btn-icon" size={24} />} />
+      <ButtonIcon icon={<BiSlider className="btn-icon" size={24} />} />
       <ThemeSwitcher />
       <ButtonIcon
         className="absolute bottom-[4.5rem] h-16 w-16"
