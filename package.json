@@ -18,7 +18,7 @@
     "@nrwl/node": "15.9.2",
     "@nrwl/react": "^15.9.2",
     "@nrwl/vite": "15.9.2",
-    "@nrwl/webpack": "15.9.2",
+    "@nrwl/webpack": "16.1.0",
     "@testing-library/react": "14.0.0",
     "@types/cors": "^2.8.13",
     "@types/express": "4.17.13",
