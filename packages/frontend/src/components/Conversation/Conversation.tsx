@@ -1,3 +1,9 @@
+import { TypingBar } from '../TypingBar';
+
 export const Conversation = () => {
-  return <div className="bg-blue-500 grow h-full">Conversation</div>;
+  return (
+    <div className="grow h-full relative">
+      <TypingBar />
+    </div>
+  );
 };

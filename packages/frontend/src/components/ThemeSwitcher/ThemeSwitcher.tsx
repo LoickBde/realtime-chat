@@ -11,7 +11,7 @@ export const ThemeSwitcher = () => {
 
   return (
     <button
-      className="btn-icon-container relative text-ctp-yellow"
+      className="btn-icon-container text-ctp-yellow"
       onClick={() => {
         setAnimate(true);
         toggleTheme();
