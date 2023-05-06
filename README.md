@@ -6,7 +6,8 @@
 
 ## How to use
 
-Install dependencies.
+Install dependencies.  
+⚠ Currently running on Node v18.14.
 
 ```sh
 npm ci
