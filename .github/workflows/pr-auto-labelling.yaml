@@ -6,7 +6,7 @@ on:
 jobs:
   pr-auto-labelling:
     timeout-minutes: 10
-    runs-on: ubuntu-latest
+    runs-on: decathlon
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - name: checkout
@@ -15,4 +15,4 @@ jobs:
       - name: auto apply label according to pull request title
         uses: IvanFon/super-labeler-action@v1
         with:
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
