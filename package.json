@@ -9,7 +9,7 @@
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
     "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.6",
     "@nx/eslint-plugin": "16.5.0",
     "@nx/express": "16.5.0",
     "@nx/jest": "16.5.0",
