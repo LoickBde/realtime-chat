@@ -1,0 +1,34 @@
+name: dependabot fix auto merge
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot-fix-auto-merge:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.5.1
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: approve pr
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: auto merge dependabot pr
+        if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch' && !contains(steps.metadata.outputs.dependency-names, 'nx') && !contains(steps.metadata.outputs.dependency-names, 'nrwl') }}
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
