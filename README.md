@@ -16,7 +16,7 @@ npm ci
 Run front.
 
 ```sh
-nx serve frontend
+nx serve front
 ```
 
 ## Tech stack
