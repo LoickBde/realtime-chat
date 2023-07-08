@@ -6,7 +6,7 @@
 
 ## How to use
 
-Install dependencies.  
+Install dependencies.
 ⚠ Currently running on Node v18.14.
 
 ```sh
@@ -19,18 +19,11 @@ Run front.
 nx serve frontend
 ```
 
-Run api.
-
-```sh
-nx serve backend
-```
-
-> Almost nothing has been developed on the api part yet.
-
 ## Tech stack
 
-Front: Vite, React, Tailwind.  
-Api: Webpack, Node, Express (for the moment).
+Front: Vite, React, Tailwind.
+
+> An API is coming soon...
 
 ## Understand this workspace
 
