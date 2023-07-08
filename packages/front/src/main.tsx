@@ -1,8 +1,9 @@
+import { RouterProvider } from '@tanstack/router';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
+import { ThemeProvider } from './components/ThemeProvider';
+import { router } from './router';
 import './styles.scss';
-import { BrowserRouter } from 'react-router-dom';
-import { App } from './components/App/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,8 +11,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );
