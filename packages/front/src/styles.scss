@@ -13,14 +13,23 @@
 }
 
 @layer components {
-  .btn-icon {
-    @apply m-auto;
+  .btn {
+    @apply flex cursor-pointer 
+    hover:bg-ctp-surface2/50 
+    base-transition;
 
-    &-container {
-      @apply flex h-10 w-10 
-      rounded-full cursor-pointer 
-      hover:bg-ctp-surface2/50 
-      transition-all duration-300 ease-out;
+    &-icon {
+      @apply h-10 w-10 rounded-full;
     }
+
+    &-icon__content {
+      @apply m-auto;
+    }
+  }
+}
+
+@layer utilities {
+  .base-transition {
+    @apply transition-all duration-300 ease-out;
   }
 }

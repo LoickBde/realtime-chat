@@ -1,17 +1,17 @@
 import { useContext, useState } from 'react';
-import { ThemeContext } from '../../context';
-import { BiSun, BiMoon } from 'react-icons/bi';
+import { BiMoon, BiSun } from 'react-icons/bi';
 import { ThemeEnum } from '../../constants';
+import { ThemeContext } from '../../context';
 
 export const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [animate, setAnimate] = useState(false);
 
-  const iconClass = `btn-icon${animate ? ' animate-toggleIcon' : ''}`;
+  const iconClass = `btn-icon__content${animate ? ' animate-toggleIcon' : ''}`;
 
   return (
     <button
-      className="btn-icon-container text-ctp-yellow"
+      className="btn btn-icon text-ctp-yellow"
       onClick={() => {
         setAnimate(true);
         toggleTheme();

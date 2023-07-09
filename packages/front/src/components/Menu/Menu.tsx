@@ -1,28 +1,32 @@
+import { Link } from '@tanstack/router';
 import {
+  BiChat,
   BiHome,
   BiLogOutCircle,
-  BiUserCircle,
-  BiChat,
   BiSlider,
+  BiUserCircle,
 } from 'react-icons/bi';
 import { ThemeSwitcher } from '../ThemeSwitcher';
-import { ButtonIcon } from '../ButtonIcon';
 
 export const Menu = () => {
   return (
     <div className="relative w-24 h-full flex flex-col items-center justify-center gap-3">
-      <ButtonIcon icon={<BiHome className="btn-icon" size={24} />} />
-      <ButtonIcon icon={<BiChat className="btn-icon" size={24} />} />
-      <ButtonIcon icon={<BiSlider className="btn-icon" size={24} />} />
+      <Link className="btn btn-icon" to="/">
+        <BiHome className="btn-icon__content" size={24} />
+      </Link>
+      <Link className="btn btn-icon" to="/about">
+        <BiChat className="btn-icon__content" size={24} />
+      </Link>
+      <Link className="btn btn-icon" to="/settings">
+        <BiSlider className="btn-icon__content" size={24} />
+      </Link>
       <ThemeSwitcher />
-      <ButtonIcon
-        className="absolute bottom-[4.5rem] h-16 w-16"
-        icon={<BiUserCircle className="btn-icon" size={48} />}
-      />
-      <ButtonIcon
-        className="absolute bottom-4"
-        icon={<BiLogOutCircle className="btn-icon text-ctp-red" size={24} />}
-      />
+      <button className="btn btn-icon absolute bottom-[4.5rem] h-16 w-16">
+        <BiUserCircle className="btn-icon__content" size={48} />
+      </button>
+      <button className="btn btn-icon absolute bottom-4">
+        <BiLogOutCircle className="btn-icon__content text-ctp-red" size={24} />
+      </button>
     </div>
   );
 };
