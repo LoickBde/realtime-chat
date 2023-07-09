@@ -1,6 +1,6 @@
 import { BiSearchAlt } from 'react-icons/bi';
-import { ChatCard } from '../ChatCard';
 import { ButtonIcon } from '../ButtonIcon';
+import { ChatCard } from '../ChatCard';
 
 const chatContact = ['Jean', 'Pierre', 'Mbappe'];
 
@@ -12,8 +12,8 @@ export const Chats = () => {
         <ButtonIcon icon={<BiSearchAlt size={32} className="btn-icon" />} />
       </div>
       <div className="grow px-2">
-        {chatContact.map((contact) => (
-          <ChatCard contactName={contact} />
+        {chatContact.map((contact, index) => (
+          <ChatCard key={index} contactName={contact} />
         ))}
       </div>
     </div>
